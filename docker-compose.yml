@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  cron:
+    image: uguraslan/nodetab
+    environment:
+      SCHEDULE: "* * * * *"
+      TASK: "node index.js"
+    volumes:
+      - .:/app
