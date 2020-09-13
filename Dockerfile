@@ -9,4 +9,6 @@ rm -rf /usr/share/doc /usr/share/man /var/lib/apt/lists/* /root/* /tmp/*
 COPY ./logrotate.conf /etc/logrotate.d/nodetab
 COPY ./cron.sh /cron.sh
 
+WORKDIR /app
+
 CMD ["/bin/bash", "/cron.sh"]
