@@ -45,6 +45,16 @@ services:
       - .:/app
 ```
 
+## Extending as a new `Dockerfile`
+
+If you want to create an docker image by adding your application/script code you can use following template. The default WORKDIR is `/app` directory.
+
+```
+FROM uguraslan/nodetab:latest
+
+COPY . /app
+```
+
 ## Notes :
 
 - The task command must be run and exit after it finishes its job.
